@@ -27,12 +27,13 @@ let apiCall = function (city) {
         const forecastDiv = document.createElement("div");
         forecastDiv.className = "forecast-item";
         forecastDiv.innerHTML = `
-          <div class="forecast-date"><h5><i class="bi bi-calendar-date"></i> ${date}</h5></div>
+         <div id="forecastDiv"> <div class="forecast-date"><h5><i class="bi bi-calendar-date"></i> ${date}</h5></div>
           <div class="forecast-time"><i class="bi bi-clock"></i> ${time}</div>
           <div class="forecast-temperature"><i class="bi bi-thermometer-half"></i>${temperature}°C</div>
           <div class="forecast-humidity"><i class="bi bi-droplet"></i>${humidity}%</div>
           <div class="forecast-wind"><i class="bi bi-wind"></i>${windSpeed}Km/h</div>
           <div class="forecast-description">${weatherDescription}</div>
+          </div>
         `;
 
         forecastContainer.appendChild(forecastDiv);
